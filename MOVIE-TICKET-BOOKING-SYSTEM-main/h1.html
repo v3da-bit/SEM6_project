@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <style>
+:root {
+  --purple-1: #3d174f;
+  --purple-2: #4b2860;
+  --white: #fff;
+  --black: #221f1f;
+  --red: #ed1849;
+  --lightgray: #cfcfcf;
+  --overlay: rgba(0, 0, 0, 0.5);
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+ 
+html {
+  font-size: 62.5%;
+}
+ 
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+ 
+ul {
+  list-style: none;
+}
+ 
+a {
+  text-decoration: none;
+}
+ 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ 
+a,
+button {
+  color: inherit;
+}
+ 
+.no-transition {
+  transition: none !important;
+}
+ 
+body {
+  font: 1.6rem/1.5 Roboto, sans-serif;
+  color: var(--white);
+  min-height: 100vh;
+}
+.page-header {
+  padding: 1.5rem 3rem;
+  background: var(--purple-1);
+}
+ 
+.page-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.page-header .horizontal-logo,
+.page-header .search span {
+  display: none;
+}
+        </style>
+    </head>
+    <body>
+        <header class="page-header">
+            <nav>
+              <button aria-label="Open Mobile Menu" class="open-mobile-menu fa-lg">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+              </button>
+              <a href="">
+                <img class="logo horizontal-logo" src="horizontal-logo.svg" alt="">
+                <img class="logo vertical-logo" src="vertical-logo.svg" alt="">
+              </a>
+              <div class="top-menu-wrapper">
+                <div class="panel panel1"></div>
+                <div class="panel panel2"></div>
+                <ul class="top-menu">
+                  <li class="mob-block">
+                    <img class="logo" src="horizontal-logo-mobile.svg" alt="">
+                    <button aria-label="Close Mobile Menu" class="close-mobile-menu fa-lg">
+                      <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                  </li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li class="has-dropdown">
+                    ...
+                    <ul class="sub-menu">...</ul>
+                  </li>
+                  <li class="has-dropdown">
+                    ...
+                    <ul class="sub-menu">...</ul>
+                  </li>
+                  <li>
+                    <ul class="socials">...</ul>
+                  </li>
+                </ul>
+                <button class="search">...</button>
+                <form class="search-form">
+                  <div>
+                    <input type="search" placeholder="Search Resources">
+                    <button aria-label="Search Resources" type="submit">
+                      <i class="fas fa-search fa-2x" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </nav>
+          </header>
+    </body>
+</html>

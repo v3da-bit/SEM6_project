@@ -1,0 +1,188 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Landing-page</title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+          .dot {
+            height: 10px;
+            width: 10px;
+            margin-top:0.5%;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block; 
+            transition: background-color 0.6s ease;
+          }
+        
+          .active{
+            background-color: #201b20;
+            opacity: 0.70;
+          }
+  
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+
+          @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+          
+          @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+          }
+          .slideshow-container img{
+              height:60%;
+              
+          }
+          .slideshowArrow {
+              font-size: 7em;
+              color: #9e9c9c;
+              cursor: pointer;
+              opacity: 0.60;
+              transition: opacity 0.5s ease-in-out;
+        }
+
+        .slideshowArrow:hover {
+              color: #717171;
+              opacity: 0.75;
+        }
+
+        #leftArrow {
+              position: absolute;
+              left: 4%;
+              top: 26%;
+              transform: translate(-50%, -50%);
+        }
+
+        #rightArrow {
+              position: absolute;
+              right: 4%;
+              top: 26%;
+              transform: translate(50%, -50%);
+        }
+        .circles{
+              border: 2px solid black;
+              background: black;
+        }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="slideshow-container">
+             <div class="mySlides fade">
+                <img src="file:///C:/Users/HP/Downloads/slider img/thor.jpg" style="width:100%;">
+              </div>
+              
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/m.jpg" style="width:100%;">
+
+              </div>
+           <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/B2-design.jpg" style="width:100%;">
+              
+              </div>
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/kaval.jpg" style="width:100%;">
+              
+              </div>
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/ott.jpg" style="width:100%;">
+              
+              </div>
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/i.jpg" style="width:100%;">
+              
+              </div>
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/cobra.jpg" style="width:100%;">
+              
+              </div>
+              <div class="mySlides fade">
+           
+                <img src="file:///C:/Users/HP/Downloads/slider img/cabin.jpg" style="width:100%;">
+              
+              </div>
+              <div class="circles" style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                
+              </div>
+              <span id ="leftArrow"  class="slideshowArrow" onclick="plusDivs(-1)">&#10094;</span>
+  <span id ="rightArrow"  class="slideshowArrow" onclick="plusDivs(1)">&#10095;</span>
+        </div>
+
+
+    </body>
+    <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<script>
+ 
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+</script>
+
+
+
+    </html>

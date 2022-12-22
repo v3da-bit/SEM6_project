@@ -1,0 +1,17 @@
+
+body{
+    margin:0;
+    padding: 0;
+}    
+.carousel{
+    transform: translateY(-150px);
+    height: 750px;
+    perspective: 600px;
+
+}
+.carousel .carousel-item{
+    width: 400px;
+}
+.carousel .carousel-item img{
+    width: 100%;
+}
