@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+ outline: none !important;;
+}
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: black;
+  height: 60px;
+}
+#navbar h2{
+      margin: 0;
+      margin-top: .6%;
+      float: left;
+      padding: 4px;
+      color: #fd614d;
+
+}
+.nav a{
+  float: left;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 2%;
+  margin-top: .7%;
+}
+
+.nav a:hover {
+  
+  border-bottom: 4px solid #fd614d;
+  color: whitesmoke;
+}
+
+.nav a.active {
+      border-bottom: 4px solid #fd614d;
+  color:#f64c72;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+input[type=text]{
+    border: none;
+    background-image:linear-gradient(100deg,#f64c72,#fd614d);
+    margin-top: 1.4%;
+    padding: 6px;
+    margin-left: 2%;
+    font-size: 17px;
+}
+.search-container button,a{
+    background-color: transparent;
+    border: none;
+    color: #fd614d;
+    font-size: 20px;   
+}
+.fa-user-circle{
+      margin-left: 500px;
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+    <h2>MOVIES</h2>
+    <div class="nav">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+    </div>
+  <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <a href="#"><i class="fa fa-user-circle"></i></a>
+        </form>
+        </div>
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

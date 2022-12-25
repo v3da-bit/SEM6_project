@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.dot {
+height: 10px;
+width: 10px;
+margin-top:0.5%;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block; 
+transition: background-color 0.6s ease-in-out;
+}
+
+.dot.active{
+background-color: #201b20;
+opacity: 0.70;
+}
+
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+    
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
+.slideshow-container img{
+  margin-top:40px ;
+  height:60%;
+  
+}
+.slideshowArrow {
+  font-size: 7em;
+  color: #9e9c9c;
+  cursor: pointer;
+  opacity: 0.60;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  color: #717171;
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 37%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 37%;
+  transform: translate(50%, -50%);
+}
+.circles{
+  border: 2px solid black;
+  background: black;
+}

@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <style>
+         *:focus {
+            outline: 0 !important;
+        }
+       
+
+         .reg{
+            width: 360px;
+            margin: auto;
+            color:rgb(243, 26, 98);
+        }
+        .reg h2{
+            color:rgb(243, 26, 98);
+            text-align:center
+        }
+
+        .reg form{
+            border-radius: 1px;
+            margin-bottom: 15px;
+
+            background-color: black;
+            border: 1px solid none;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+            padding: 30px;
+            
+                }
+        .reg .form-group{
+            margin-bottom: 30px;
+        }
+        .reg .form-control{
+            min-height: 38px;
+            box-shadow: none !important;
+            border-width: 0 0 1px 0;
+        }
+        .form-control{
+            background-color: transparent;
+            color: rgb(243, 26, 98);
+        }
+        .form-control:hover {
+            background-color: transparent;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        button{
+            cursor: pointer;
+            border-color: rgb(243, 26, 98);
+            min-height: 38px;
+            background-color: transparent;
+            color: rgb(243, 26, 98);
+        }
+        button:hover{
+            background-color: rgb(243, 26, 98);
+            color: aliceblue;
+            border-color: transparent;
+        }
+        select{
+            background-color: transparent;
+            color: aliceblue;
+            border: none;
+        }
+        select:hover{
+            color: rgb(243, 26, 98);
+        }
+        span{
+            color: aliceblue;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 90%;
+            height: 10px;
+            border-radius: 15px;  
+            background: aliceblue;
+        
+         }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%; 
+            background: rgb(243, 26, 98);
+            cursor: pointer;
+        }
+
+
+        </style>
+    </head>
+    <body>
+        
+      <div class="reg">
+        
+        <form>
+            <div class="tit"><h2>REGISTRATION</h2></div>
+            <labe>Name:</labe>
+            <div class="form-group">
+                <input type="name" placeholder="name" name="name" class="form-control" required>
+            </div>
+            <label>Email:</label>
+            <div class="form-group">
+                <input type="email" placeholder="Email" name="email" class="form-control" required>
+            </div>
+            <label>Gender:</label>
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="Gender:"  required><span>male</span>
+                </label>
+                <label><input type="radio" name="Gender:"   required><span>female</span></label>
+            </div>
+           <label>Area Of Intrest:</label>
+            <div class="form-group">
+                <label><input type="checkbox" name="area1" ><span>web designin</span></label><br>
+               <label> <input type="checkbox" name="area2" ><span>web devloping</span></label><br>
+              <label>  <input type="checkbox" name="area3" ><span>app devloping</span></label><br>
+               <label> <input type="checkbox" name="area4" ><span>photoshop</span></label>
+            </div>
+
+            <label>State:</label>
+            <div class="form-group">
+                <select name="State">
+                    <option name="State" value="Tamilnadu">Tamilnadu</option>
+                    <option name="State" value="kerala">kerala</option>
+                    <option name="State" value="karnataka">karnataka</option>
+                    <option name="State" value="Andrapradesh">Andrapradesh</option>
+                    <option name="State" value="Maharastra">Maharastra</option>
+                    <option name="State" value="Telungana">Telungana</option>
+                  </select>
+                  
+            </div>
+             <label> age: <span id="demo"></span></label>
+            <div class="form-group">
+                <input type="range" min="1" max="40" class="slider"value="17" id="myRange">
+              </div>
+              <div class="form-group">
+                  <button type="submit">submit</button>
+              </div>
+        </form>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            </script>
+      </div>
+    </body>
+</html>
