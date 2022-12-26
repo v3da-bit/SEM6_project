@@ -1,4 +1,4 @@
-var swiper=new swiper(".populer-content",{
+var swiper=new swiper(".popular-content",{
     slidesPerView:1,
     spaceBetween:10,
     autoplay:{

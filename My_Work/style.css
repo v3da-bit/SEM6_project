@@ -28,9 +28,13 @@ img{
 }
 body{
     background: var(--body-color);
+    background-color: #2d2e37;
     color: var(--text-color);
 }
-.container{
+.main{
+    background-color: #2d2e37;
+}
+.containerr{
     max-width: 1068px;
     margin: auto;
     width: 100%;
@@ -43,7 +47,7 @@ header{
     background: var(--body-color);
     z-index: 100;
 }
-.nav{
+.navv{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +98,7 @@ header{
     object-fit: cover;
     object-position: center;
 }
-.navbar{
+.navbarr{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -102,7 +106,7 @@ header{
     flex-direction: column;
     row-gap: 2.1rem;
 }
-.nav-link{
+.nav-linkk{
     display: flex;
     flex-direction: column;
     align-items: center;
