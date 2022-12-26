@@ -237,11 +237,15 @@ header{
     font-weight: 700;
 }
 .myStyle{
-    height: 800px;
+    height: 600px;
+    width: auto;
     
 }
 
-
+.imgDiv{
+    height: 600px;
+    width: auto;
+}
 
 
 
