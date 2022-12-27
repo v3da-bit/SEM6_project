@@ -23,9 +23,7 @@ li{
 section{
     padding: 3rem 0 2rem;
 } 
-img{
-    width: 100%;
-}
+
 .fix{
     background: var(--body-color);
     background-color: #22232e;
@@ -237,15 +235,17 @@ header{
     font-weight: 700;
 }
 .myStyle{
-    height: 600px;
-    width: auto;
+    height: 700px;
+    width: 500px;
     
 }
 
 .imgDiv{
-    height: 600px;
-    width: auto;
+    height: 700px;
+   width: auto;
 }
+
+
 
 
 
