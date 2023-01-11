@@ -31,6 +31,12 @@
           "scroll-behavior"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
