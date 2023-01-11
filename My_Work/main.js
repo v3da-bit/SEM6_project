@@ -2,7 +2,7 @@ var swiper=new swiper(".popular-content",{
     slidesPerView:1,
     spaceBetween:10,
     autoplay:{
-        delay:755500,
+        delay:5500,
         disableOnInteraction:false,
     },
     pagination:{
