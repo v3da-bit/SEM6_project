@@ -219,6 +219,11 @@ header{
 .movie-type{
     font-size: 0.938rem;
 }
+.play-btn{
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+}
 .swiper-btn{
     display: flex;
 }
@@ -258,8 +263,18 @@ width: 100px;
 position: relative;
 left: 300px;
 }
+<<<<<<< HEAD
 #buttonsDiv{
     left: 10px;
+=======
+.movies .heading{
+    display: 10px 14px;
+}
+.movies-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(247px,1fr));
+    gap: 1.5rem;
+>>>>>>> 755cc9ed1477826caa2fab68da4385ce3b61b78f
 }
 
 
