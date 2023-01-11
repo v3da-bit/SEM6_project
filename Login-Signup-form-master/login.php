@@ -1,5 +1,53 @@
 <!DOCTYPE HTML>
-<html lang="en" >
+<?php
+if (isset($_POST['submit'])) {
+  echo "hello";
+
+  //echo "<script>alert('hello');</script>";
+  
+  $email =  $_POST['email'];
+  $pass =   $_POST['password'];
+  //$encryptPass= password_hash($pass, PASSWO);
+  
+$conn=mysqli_connect("localhost","root","","cinema_booking");
+// if ($conn -> connect_errno) {
+//   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+//   exit();
+// }
+// else{
+//   echo "connected";
+// }
+$emailquery="SELECT * FROM login WHERE email='$email'";
+//$passquery="SELECT * FROM login WHERE ";
+$sql=mysqli_query($conn,$emailquery);
+$emailcount=mysqli_num_rows($sql);  
+if ($emailcount) {
+  echo "email present";
+
+  $email_pass=mysqli_fetch_assoc($sql);
+  $db_pass_check=$email_pass['password'];
+  $pass_decode=password_verify($pass,$db_pass_check);
+  if ($pass_decode) {
+    echo "succeed";
+    header("Location: My_Work\index.html");
+  }
+  else{
+    echo "password didn't match";
+  }
+
+  # code...
+}
+else{
+  echo "email not found";
+}
+/*$uname=$_POST['uname'];
+$pass=$_POST['password'];
+$query=`INSERT INTO login (UserName,password) VALUES('$uname','$pass')`;
+*/
+}
+?>
+
+<html lang="en">
 <html>
 <head>
   <title>Login</title>
@@ -19,20 +67,22 @@
 <div class="login-page">
   <div class="form">
 
-    <form>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <h1>LogIn</h1>
       <lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player>
-      <input type="text" placeholder="&#xf007;  username"/>
-      <input type="password" id="password" placeholder="&#xf023;  password"/>
+      <input type="email" placeholder="&#xf007;  Email" name="email"/>
+      <input type="password" id="password" placeholder="&#xf023;  password" name="password"/>
       <i class="fas fa-eye" onclick="show()"></i> 
       <br>
       <br>
-      <button>LOGIN</button>
+      <button id="login" name="submit">LOGIN</button>
       <p class="message"></p>
+      <form class="login-form">
+      <h5>Didn't have Any Account: <a href="signup.php">SignUp</a></h5>
+    </form>
     </form>
 
-    <form class="login-form">
-      <button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
-    </form>
+    
   </div>
 </div>
 

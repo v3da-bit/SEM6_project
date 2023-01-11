@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,18 @@
     <link rel="stylesheet" href="swiper_bundle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" integrity="sha512-jxGmKjC/OykrTklkNK2NgnhNtKtUAADFY+rvSi3nA7dbaPRfjrSXYxHqX8iq5N6WTOntqEQZrEwW3L84sirfKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css"
+        integrity="sha512-jxGmKjC/OykrTklkNK2NgnhNtKtUAADFY+rvSi3nA7dbaPRfjrSXYxHqX8iq5N6WTOntqEQZrEwW3L84sirfKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="shorcut icon" href="img/fav-icon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body class="fix">
-   
+
     <header>
         <div class="navv containerr">
             <a href="index.html" class="logo">
@@ -35,9 +39,9 @@
                     <i class='bx bx-home'></i>
                     <span class="nav-link-title">Home</span>
                 </a>
-                <a href="#home" class="nav-linkk">
+                <a href="#popular-content" class="nav-linkk">
                     <i class='bx bxs-hot'></i>
-                    <span class="nav-link-title">Treanding</span>
+                    <span class="nav-link-title">Trending</span>
                 </a>
                 <a href="#home" class="nav-linkk">
                     <i class='bx bx-compass'></i>
@@ -54,7 +58,7 @@
             </div>
         </div>
     </header>
-    
+
     <section class="home containerr" id="home">
         <img src="imgs_movies/img/home-background.png" alt="" class="home-img">
         <div class="home-text">
@@ -70,8 +74,8 @@
         <div class="heading">
             <h2 class="heading-title">Popular Movies</h2>
         </div>
-           
-        <div class="popular-content myStyle swiper">
+
+        <div class="popular-content myStyle swiper" id="popular-content">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -85,25 +89,29 @@
                 </ol>
                 <div class="carousel-inner outerdiv">
                     <div class="carousel-item active imgDiv movie-box">
-                        <img class="d-block h-100 w-100 movie-box imgBlock" src="imgs_movies/img/movie-1.jpg" alt="First slide"  >
-                        <div class=" box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 movie-box imgBlock" src="imgs_movies/img/movie-1.jpg"
+                            alt="First slide">
+                        <div class=" box-text h-25 w-100 ">
                             <h2 class="movie-title">Jumanji: Welcome To The Jungle</h2>
                             <span class="movie-type">Adventure</span>
-                            <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
-                            <a href="https://www.youtube.com/watch?v=i8YoTevvkks" class="watch-btn play-btn w-25">
-                                <i class="bx bx-right-arrow"></i>
-                            </a>
-                        </div>
+                            <div id="buttonsDiv">
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
+                                <a href="https://www.youtube.com/watch?v=i8YoTevvkks" class="watch-btn play-btn w-25">
+                                    <i class="bx bx-right-arrow"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 movie-box imgBlockimgBlock" src="imgs_movies/img/movie-2.jpg" alt="Second slide" >
-                        <div class="box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 movie-box imgBlockimgBlock" src="imgs_movies/img/movie-2.jpg"
+                            alt="Second slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Hitman & Bodyguard 2</h2>
                             <span class="movie-type">Action</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -111,12 +119,13 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-3.jpg" alt="Third slide" >
-                        <div class="box-text h-25 w-100 detailsBox ">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-3.jpg" alt="Third slide">
+                        <div class="box-text h-25 w-100  ">
                             <h2 class="movie-title">Sang-Chi And The Legend Of Ten Rings</h2>
                             <span class="movie-type">Action,Marvel</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -124,12 +133,13 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-4.jpg" alt="Fourth slide" >
-                        <div class="box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-4.jpg" alt="Fourth slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Eternels</h2>
                             <span class="movie-type">Action</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -137,12 +147,13 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-5.jpg" alt="Fifth slide" >
-                        <div class="box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-5.jpg" alt="Fifth slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Spectre</h2>
                             <span class="movie-type">Adevnture</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -150,12 +161,13 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-6.jpg" alt="Sixth slide" >
-                        <div class="box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-6.jpg" alt="Sixth slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Money-Heist</h2>
                             <span class="movie-type">Adevnture</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -163,25 +175,27 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-7.jpg" alt="Seventh slide" >
-                        <div class="box-text h-25 w-100 detailsBox">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-7.jpg" alt="Seventh slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">The Wolverine</h2>
                             <span class="movie-type">Action</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item imgDiv movie-box" >
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-8.jpg" alt="Eight slide" >
-                        <div class="box-text h-25 w-100 detailsBox" >
+                    <div class="carousel-item imgDiv movie-box">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-8.jpg" alt="Eight slide">
+                        <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title" style="color: grey;">Johnny English:Strikes Again</h2>
                             <span class="movie-type" style="color: grey;">Adevnture,Comedy</span>
                             <div>
-                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book Now</button></a>
+                                <a href="Movie_Reservation/seatReservation.html"><button class="book btn-primary">Book
+                                        Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
                                 </a>
@@ -189,30 +203,37 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="swiper-button-prev" ></span>
-                    <span class="sr-only">Previous</span>               </a>
+                    <span class="swiper-button-prev"></span>
+                    <span class="sr-only">Previous</span> </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="swiper-button-next" ></span>
+                    <span class="swiper-button-next"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-           
+
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-                
-</div>
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+
+        </div>
+    </section>
+    <section>
+        <div id="" class="container">
+
+
+        </div>
     </section>
 
     <script type="text/javascript" src="swiper-bundlemin.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
