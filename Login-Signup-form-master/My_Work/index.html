@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Movies Websites</title>
+    <title>Ghost Cinema</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="swiper_bundle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -17,15 +17,16 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="shorcut icon" href="img/fav-icon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-<body class="fix">
+<body class="fix" onload="loadData()">
 
     <header>
         <div class="navv containerr">
             <a href="index.html" class="logo">
-                Movie<span>Vel</span>
+                POP<span>CORN</span>
             </a>
             <div class="search-box">
                 <input type="search" name="" id="search-input" placeholder="search Movie">
@@ -43,15 +44,16 @@
                     <i class='bx bxs-hot'></i>
                     <span class="nav-link-title">Trending</span>
                 </a>
-                <a href="#home" class="nav-linkk">
+                <a href="#" id="searchIndex" class="nav-linkk">
+
                     <i class='bx bx-compass'></i>
                     <span class="nav-link-title">Explore</span>
                 </a>
-                <a href="#home" class="nav-linkk">
+                <a href="#movie" class="nav-linkk">
                     <i class='bx bx-tv'></i>
                     <span class="nav-link-title">Movies</span>
                 </a>
-                <a href="#home" class="nav-linkk">
+                <a href="#favourite" class="nav-linkk">
                     <i class='bx bx-heart'></i>
                     <span class="nav-link-title">Favourite</span>
                 </a>
@@ -70,7 +72,13 @@
             </a>
             <br>
             <a href="Movie_Reservation\hitman\hitman_seats.html"><button class="hitmanBook btn-primary">Book
-                Now</button></a>
+                    Now</button></a>
+            <br><br>
+            <button class="btn SlideLike1" onclick="favourite(value.id)">
+
+
+                <h2 class="heart${value.id} HomeLikeBtn">&#9825;</h2>
+            </button>
         </div>
     </section>
     <section class="popular containerr" id="popular">
@@ -96,9 +104,18 @@
                             alt="First slide">
                         <div class=" box-text h-25 w-100 ">
                             <h2 class="movie-title">Jumanji: Welcome To The Jungle</h2>
-                            <span class="movie-type">Adventure</span>
+                            <span class="movie-type">Adventure <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button>
+                            </span>
+
                             <div id="buttonsDiv">
-                                <a href="Movie_Reservation\jumanji\jumanji_seat.html"><button class="book btn-primary">Book
+
+                                <a href="Movie_Reservation\jumanji\jumanji_seat.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="https://www.youtube.com/watch?v=i8YoTevvkks" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -107,13 +124,19 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 movie-box imgBlockimgBlock" src="imgs_movies/img/movie-2.jpg"
+                        <img class="d-block h-100 w-100 movie-box imgBlock" src="imgs_movies/img/avengersEndGame.jpg"
                             alt="Second slide">
                         <div class="box-text h-25 w-100 ">
-                            <h2 class="movie-title">Hitman & Bodyguard 2</h2>
-                            <span class="movie-type">Action</span>
+                            <h2 class="movie-title">Avengers: End Game</h2>
+                            <span class="movie-type">Action,Marvel <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation\hitman\hitman_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/avengers/avengers_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -125,9 +148,15 @@
                         <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-3.jpg" alt="Third slide">
                         <div class="box-text h-25 w-100  ">
                             <h2 class="movie-title">Sang-Chi And The Legend Of Ten Rings</h2>
-                            <span class="movie-type">Action,Marvel</span>
+                            <span class="movie-type">Action,Marvel <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/sanghChi/sanghChi_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/sanghChi/sanghChi_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -139,9 +168,15 @@
                         <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-4.jpg" alt="Fourth slide">
                         <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Eternels</h2>
-                            <span class="movie-type">Action</span>
+                            <span class="movie-type">Action <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/eternals/eternals_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/eternals/eternals_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -153,9 +188,15 @@
                         <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-5.jpg" alt="Fifth slide">
                         <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Spectre</h2>
-                            <span class="movie-type">Adevnture</span>
+                            <span class="movie-type">Adventure <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/spectre/spectre_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/spectre/spectre_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -167,9 +208,15 @@
                         <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-6.jpg" alt="Sixth slide">
                         <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">Money-Heist</h2>
-                            <span class="movie-type">Adevnture</span>
+                            <span class="movie-type">Adventure <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -181,9 +228,15 @@
                         <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-7.jpg" alt="Seventh slide">
                         <div class="box-text h-25 w-100 ">
                             <h2 class="movie-title">The Wolverine</h2>
-                            <span class="movie-type">Action</span>
+                            <span class="movie-type">Action <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/wolverine/wolverine_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/wolverine/wolverine_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -192,12 +245,19 @@
                         </div>
                     </div>
                     <div class="carousel-item imgDiv movie-box">
-                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-8.jpg" alt="Eight slide">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/justice_league.jpg"
+                            alt="Eight slide">
                         <div class="box-text h-25 w-100 ">
-                            <h2 class="movie-title" style="color: grey;">Johnny English:Strikes Again</h2>
-                            <span class="movie-type" style="color: grey;">Adevnture,Comedy</span>
+                            <h2 class="movie-title">Justice League</h2>
+                            <span class="movie-type">Action <button class="btn SlideLike1"
+                                    onclick="favourite(value.id)">
+
+
+                                    <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                                </button></span>
                             <div>
-                                <a href="Movie_Reservation/johnnyEnglish/johnnyEmglish_seats.html"><button class="book btn-primary">Book
+                                <a href="Movie_Reservation/justiceLeague/justiceLeague_seats.html"><button
+                                        class="book btn-primary">Book
                                         Now</button></a>
                                 <a href="#" class="watch-btn play-btn w-25">
                                     <i class="bx bx-right-arrow"></i>
@@ -228,15 +288,89 @@
 
         </div>
     </section>
-    <section>
-        <div id="" class="container">
+    <section class="movies ">
+        <div id="movie" class="container">
+            <div class="heading" style="margin-left: 10px;">
+                <h2 class="heading-title">Movie And Shows</h2>
+            </div>
+            <div class="d-flex" id="movie-container1">
+                <!-- <div class=" p-2 movieItems">
+                    <img class="d-block showsImg" src="imgs_movies/img/movie-6.jpg">
+                    <div class="box-text w-100 "><br>
+                        <h2 class="movie-title">Money-Heist</h2>
+                        <span class="movie-type">Adventure</span>
+                        <button class="btn like1" onclick="favourite1()">
+
+
+                            <h2 class="heart1">&#9825;</h2>
+                        </button>
+                        <br>
+                    </div><br><br>
+                    <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                            class="showsBook btn-primary">Book
+                            Now</button></a>
+
+
+                </div>
+                 -->
+            </div>
+            <br>
+            <div class="d-flex" id="movie-container2">
+                <!-- <div class=" p-2 movieItems">
+                    <img class="d-block showsImg" src="imgs_movies/img/popular-movie-4.jpg">
+                    <div class="box-text w-100 "><br>
+                        <h2 class="movie-title">Squid Game</h2>
+                        <span class="movie-type">Thrill,Adventure</span><button class="btn like6"
+                            onclick="favourite6()">
+
+
+                            <h2 class="heart6">&#9825;</h2>
+                        </button>
+                        <br>
+                    </div><br><br>
+                    <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                            class="showsBook btn-primary">Book
+                            Now</button></a>
+
+
+                </div>
+                
+ -->
+
+            </div>
+
 
 
         </div>
     </section>
+    <section class="favourite">
+        <div id="favourite" class="container">
+            <div class="heading">
+                <h2 class="heading-title">Favourite Movies</h2>
+            </div>
+            <div class="d-flex " id="MainDiv1">
+
+                <div class="container favInstruction" id="favInstruction" style="text-align: center; height: 100px;">
+                    <h2 style="color: white;">Please Select your Favourite Movies You want using '&#9825;' Button</h2>
+                </div>
+            </div><br>
+            <div class="d-flex " id="MainDiv2">
+
+
+            </div>
+        </div>
+
+
+
+
+    </section>
 
     <script type="text/javascript" src="swiper-bundlemin.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="index.js">
+
+
+    </script>
 </body>
 
 </html>

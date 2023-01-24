@@ -51,10 +51,10 @@
       echo "<script type='text/javascript'>alert('email or username already exist');</script>";
     } else {
       # code...
-      $query = "INSERT INTO login VALUES('$fullname','$email','$uname','$password','$cpassword')";
+      $query = "INSERT INTO login(fullName, email, UserName, password, confirm) VALUES('$fullname','$email','$uname','$password','$cpassword')";
       // echo "<script>alert('hello');</script>";
       $sql = mysqli_query($conn, $query);
-      if ($conn->query($query) === TRUE) {
+      if ($sql) {
         echo "<script type='text/javascript'>alert('data interserted');</script>";
       } else {
         die("Error" . $conn->error);

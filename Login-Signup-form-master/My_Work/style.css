@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,37 +8,44 @@
     box-sizing: border-box;
     scroll-padding-top: 2rem;
 }
-:root{
-    --main-color:#ffb43a;
-    --hover-color:hsl(37,94%,57%);
-    --body-color:#1e1e2a;
-    --container-color:#2d2e37;
-    --text-color:#fcfeff;
+
+:root {
+    --main-color: #ffb43a;
+    --hover-color: hsl(37, 94%, 57%);
+    --body-color: #1e1e2a;
+    --container-color: #2d2e37;
+    --text-color: #fcfeff;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-section{
-    padding: 3rem 0 2rem;
-} 
 
-.fix{
+section {
+    padding: 3rem 0 2rem;
+}
+
+.fix {
     background: var(--body-color);
     background-color: #22232e;
     color: var(--text-color);
 }
-.main{
+
+.main {
     background-color: #2d2e37;
 }
-.containerr{
+
+.containerr {
     max-width: 1068px;
     margin: auto;
     width: 100%;
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,23 +53,27 @@ header{
     background: var(--body-color);
     z-index: 100;
 }
-.navv{
+
+.navv {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
 }
-.logo{
+
+.logo {
     font-size: 1.4rem;
     color: var(--text-color);
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 auto 0 0;
 }
-.logo span{
+
+.logo span {
     color: var(--main-color);
 }
-.search-box{
+
+.search-box {
     max-width: 240px;
     width: 100%;
     display: flex;
@@ -72,13 +84,16 @@ header{
     border-radius: 4rem;
     margin-right: 1rem;
 }
-.search-box .bx{
+
+.search-box .bx {
     font-size: 1.1rem;
 }
-.search-box .bx:hover{
+
+.search-box .bx:hover {
     color: var(--main-color);
 }
-#search-input{
+
+#search-input {
     width: 100%;
     border: none;
     outline: none;
@@ -86,17 +101,20 @@ header{
     background: transparent;
     font-size: 0.938rem;
 }
-.user{
+
+.user {
     display: flex;
 }
-.user-img{
+
+.user-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
-.navbarr{
+
+.navbarr {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -105,25 +123,30 @@ header{
     flex-direction: column;
     row-gap: 2.1rem;
 }
-.nav-linkk{
+
+.nav-linkk {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #b7b7b7;
 }
+
 .nav-linkk:hover,
-.nav-active{
+.nav-active {
     color: var(--text-color);
     transition: 0.3s all linear;
     transform: scale(1.1);
 }
-.nav-link .bx{
+
+.nav-link .bx {
     font-size: 1.6rem;
 }
-.nav-link-title{
+
+.nav-link-title {
     font-size: 0.7rem;
 }
-.home{
+
+.home {
     position: relative;
     min-height: 470px;
     display: flex;
@@ -131,7 +154,8 @@ header{
     margin-top: 5rem !important;
     border-radius: 0.5rem;
 }
-.home-img{
+
+.home-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -139,25 +163,30 @@ header{
     object-fit: cover;
     border-radius: 0.5rem;
 }
-.home-text{
+
+.home-text {
     padding-left: 40px;
 }
-.home-title{
+
+.home-title {
     font-size: 2rem;
     font-weight: 600;
 }
-.home-text p{
+
+.home-text p {
     font-size: 0.938rem;
     margin: 10px 0 20px;
     color: var(--main-color);
 }
-.watch-btn{
+
+.watch-btn {
     display: flex;
     align-items: center;
     column-gap: 0.8rem;
     counter-reset: var(--text-color);
 }
-.watch-btn .bx{
+
+.watch-btn .bx {
     font-size: 21px;
     background: var(--main-color);
     width: 40px;
@@ -167,14 +196,17 @@ header{
     align-items: center;
     justify-content: center;
 }
-.watch-btn .bx:hover{
+
+.watch-btn .bx:hover {
     background-color: var(--hover-color);
 }
-.watch-btn span{
+
+.watch-btn span {
     font-size: 1rem;
     font-weight: 400;
 }
-.heading{
+
+.heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -183,23 +215,27 @@ header{
     border: 1px solid hsl(200 100% 99% / 5%);
     margin-bottom: 2rem;
 }
-.heading-title{
+
+.heading-title {
     font-size: 1.2rem;
     font-weight: 500;
 }
-.movie-box{
+
+.movie-box {
     position: relative;
     width: 100%;
     height: 380px;
     overflow: hidden;
     background: rgb(50, 46, 46);
 }
-.movie-box-img{
+
+.movie-box-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.movie-box .box-text{
+
+.movie-box .box-text {
     position: absolute;
     bottom: 0;
     left: 40px;
@@ -212,76 +248,218 @@ header{
     background: transparent;
     overflow: hidden;
 }
-.movie-title{
+
+.movie-title {
     font-size: 1.1rem;
     font-weight: 500;
 }
-.movie-type{
+
+.movie-type {
     font-size: 0.938rem;
 }
-.swiper-btn{
+
+.swiper-btn {
     display: flex;
 }
+
 .swiper-button-next,
-.swiper-button-prev{
+.swiper-button-prev {
     position: static !important;
     margin: 0 0 0 10px !important;
 }
+
 .swiper-button-next::after,
-.swiper-button-prev::after{
+.swiper-button-prev::after {
     color: var(--text-color);
     font-size: 18px !important;
     font-weight: 700;
 }
-.myStyle{
+
+.myStyle {
     height: 800px;
     width: 500px;
-    
+
 }
 
-.imgDiv{
+.imgDiv {
     height: 800px;
-   width: auto;
+    width: auto;
 }
-.movie-box{
-    width:100% ;
+
+.movie-box {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-.imgBlock{
+.imgBlock {
     object-fit: cover;
 }
-.book{
-width: 100px;
-position: relative;
-left: 300px;
+
+.book {
+    width: 100px;
+    position: relative;
+    left: 300px;
 }
-.hitmanBook{
- width: 100px;
-position: relative;
+
+.hitmanBook {
+    width: 100px;
+    position: relative;
 
 }
-#buttonsDiv{
+
+#buttonsDiv {
     left: 10px;
 }
 
+.d-inline {
+    height: 300px;
+    width: 200px;
+}
 
+.d-block {
+    height: 300px;
+    width: 200px;
+}
 
+.movieItems {
+    position: static;
+    width: 220px !important;
+    float: left;
+    /* height: 380px!important; */
+    /* overflow: hidden; */
+    background: rgb(50, 46, 46);
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+.showsImg {
+    size: inherit;
+}
 
+.showsBook {
+    width: 100%;
+    position: relative;
+    /* left: 100px; */
+}
 
+.like1 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like2 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like3 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like4 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like5 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like6 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like7 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like8 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like9 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.like10 {
+    margin-left: 10px;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.heart1,
+.heart2,
+.heart3,
+.heart4,
+.heart5,
+.heart6,
+.heart7,
+.heart8,
+.heart9,
+.heart10 {
+    color: white;
+}
 
+.SlideLike1 {
+    margin-left: 20px;
+    background-color: transparent;
+    justify-content: flex-end;
+    height: 50px;
+    width: auto;
+    border-color: transparent;
+}
 
+.HomeLikeBtn {
+    color: white;
+}
 
+.LikeBtn {
+    color: white;
+}

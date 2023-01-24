@@ -26,7 +26,7 @@ var InitialView = Backbone.View.extend({
 		"click #submitSelection": "submitForm"
 	},
 	submitForm : function(){
-		var reservedseats=JSON.parse(localStorage.getItem('hitman'));
+		var reservedseats=JSON.parse(localStorage.getItem('ReservedSeats'));
 		var availableSeats=TotalSeats;
 		var selectedNumberOfSeats=$('#seats').val();
 		if(reservedseats!=null)
@@ -88,14 +88,14 @@ var ScreenUI=Backbone.View.extend({
 	bookTickets:function(){
 		if(BookedSeats.length==parseInt($('#seats').val())) {
 			$(".error").text("");
-			var reservedseats=JSON.parse(localStorage.getItem('hitman'))||[];
+			var reservedseats=JSON.parse(localStorage.getItem('ReservedSeats'))||[];
 			_.each(BookedSeats,function(bookedSeat){
 				reservedseats.push(bookedSeat);
 			});
 			var nameSeatsJSON=JSON.parse(localStorage.getItem('NameSeatsJSON'))||{};
 			nameSeatsJSON[$('#name').val()]=BookedSeats;
 			localStorage.setItem('NameSeatsJSON',JSON.stringify(nameSeatsJSON));
-			localStorage.setItem('hitman',JSON.stringify(reservedseats));
+			localStorage.setItem('ReservedSeats',JSON.stringify(reservedseats));
 			this.updateTicketInfo();
 			window.location.reload();
 		}
