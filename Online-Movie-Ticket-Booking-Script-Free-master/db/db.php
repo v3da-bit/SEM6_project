@@ -2,6 +2,7 @@
 date_default_timezone_set("Asia/Calcutta");
 class db
 {
+    public $con;
 	function db_connect()
 	{
 
@@ -9,29 +10,28 @@ class db
 	$username="root";
 	$password="";
 
-    $con = mysqli_connect($hostname,$username,$password) or die("db not connected"); 
-    $ved="hello";
+    $this->con=mysqli_connect($hostname,$username,$password) or die(mysqli_connect_errno());
 
-    return $ved;
+    return $this->con;
 
     }
 
+    //var $vedcon=dbconnect();
     function db_select()
     {
-        
 
     $database="cinema_booking";
 
-    $con1=mysqli_select_db(,$database) or die("db not connected");
+    $con1=mysqli_select_db($this->con,$database) or die(mysqli_connect_errno());
 
     return $con1;
 
     }
 
-    function db_close()
+        function db_close()
     {
 
-    mysqli_close($con);
+    mysqli_close($this->con);
 
     }
 }

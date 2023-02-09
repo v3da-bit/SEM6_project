@@ -5,7 +5,7 @@ class frontend
 	public function getlocation()
 	{
 		$query="SELECT * FROM location ORDER BY location";
-		$result=mysql_query($query);
+		$result=mysqli_query($query);
 		$testing=array();
 		while ($row=mysql_fetch_array($result))
 		{
@@ -20,9 +20,9 @@ class frontend
 		public function movies()
 	{
 		$query="SELECT * FROM movies ORDER BY id";
-		$result=mysql_query($query);
+		$result=mysqli_query($query);
 		$testing=array();
-		while ($row=mysql_fetch_array($result))
+		while ($row=mysqli_fetch_array($result))
 		{
 			$location=array();
 			$location=array('id' => $row['id'],'name'=>$row['name'] );

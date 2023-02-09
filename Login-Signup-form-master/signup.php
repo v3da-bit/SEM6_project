@@ -11,6 +11,7 @@
     
     
     if (isset($_REQUEST['submit'])) {
+      
       //header("Location: login.php");
 
   $fullname = $_POST['fullName'];

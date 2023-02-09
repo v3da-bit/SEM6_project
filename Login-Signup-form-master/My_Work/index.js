@@ -51,7 +51,12 @@
                 img: "imgs_movies/img/avatar2.jpg",
                 id: 10,
                 type: "Adventure"
-            },];
+            },{
+                title: "Jumanji: Welcome To The Jungle",
+                img: "imgs_movies/img/movie-1.jpg",
+                id: 11,
+                type: "Adventure"
+            }];
             // const favourite=document.getElementById("favourite")
             const favSec1 = document.getElementById("MainDiv1")
             // const favDiv=document.getElementById("favourite")
@@ -82,7 +87,7 @@
                         
                     
                     z.forEach(value=>{
-                        if (value.id==id) {
+                        if (value.id==id ) {
                             // if (a == 0) {
 
                             // a = 1
@@ -247,6 +252,7 @@
 
             const sec2 = document.getElementById("movie-container2")
             z.forEach(value => {
+                if(value.id<=10){
                 // console.log(value.id)
                 if (value.id<=5) {
                     console.log(value.id)
@@ -359,7 +365,8 @@
             }
                 
 
-            })
+        }   
+        })
         }
 
         $("#searchIndex").click(function () {
