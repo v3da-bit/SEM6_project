@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="popular-content myStyle swiper" id="popular-content">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner outerdiv">
+                <div class="carousel-item active imgDiv movie-box">
+                    <img class="d-block h-100 w-100 movie-box imgBlock" src="../imgs_movies/img/movie-1.jpg"
+                        alt="First slide">
+                    <div class=" box-text h-25 w-100 ">
+                        <h2 class="movie-title">Jumanji: Welcome To The Jungle</h2>
+                        <span class="movie-type">Adventure <button class="btn SlideLike1"
+                                onclick="favourite(11)">
+    
+    
+                                <h2 class="heart11 LikeBtn">&#9825;</h2>
+                            </button>
+                        </span>
+    
+                        <div id="buttonsDiv">
+    
+                            <a href="Movie_Reservation\jumanji\jumanji_seat.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="https://www.youtube.com/watch?v=i8YoTevvkks" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 movie-box imgBlock" src="../imgs_movies/img/avengersEndGame.jpg"
+                        alt="Second slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">Avengers: End Game</h2>
+                        <span class="movie-type">Action,Marvel <button class="btn SlideLike1"
+                                onclick="favourite(12)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/avengers/avengers_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/img/movie-3.jpg" alt="Third slide">
+                    <div class="box-text h-25 w-100  ">
+                        <h2 class="movie-title">Sang-Chi And The Legend Of Ten Rings</h2>
+                        <span class="movie-type">Action,Marvel <button class="btn SlideLike1"
+                                onclick="favourite(13)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/sanghChi/sanghChi_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/img/movie-4.jpg" alt="Fourth slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">Eternels</h2>
+                        <span class="movie-type">Action <button class="btn SlideLike1"
+                                onclick="favourite(14)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/eternals/eternals_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/img/movie-5.jpg" alt="Fifth slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">Spectre</h2>
+                        <span class="movie-type">Adventure <button class="btn SlideLike1"
+                                onclick="favourite(15)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/spectre/spectre_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/img/movie-7.jpg" alt="Seventh slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">The Wolverine</h2>
+                        <span class="movie-type">Action <button class="btn SlideLike1"
+                                onclick="favourite(16)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/wolverine/wolverine_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/img/justice_league.jpg"
+                        alt="Eight slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">Justice League</h2>
+                        <span class="movie-type">Action <button class="btn SlideLike1"
+                                onclick="favourite(17)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/justiceLeague/justiceLeague_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item imgDiv movie-box">
+                    <img class="d-block h-100 w-100 imgBlock" src="../imgs_movies/fastx.jpg" alt="Sixth slide">
+                    <div class="box-text h-25 w-100 ">
+                        <h2 class="movie-title">Fast X</h2>
+                        <span class="movie-type">Adventure,Action <button class="btn SlideLike1"
+                                onclick="favourite(18)">
+    
+    
+                                <h2 class="heart${value.id} LikeBtn">&#9825;</h2>
+                            </button></span>
+                        <div>
+                            <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                                    class="book btn-primary">Book
+                                    Now</button></a>
+                            <a href="#" class="watch-btn play-btn w-25">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="swiper-button-prev"></span>
+                <span class="sr-only">Previous</span> </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="swiper-button-next"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

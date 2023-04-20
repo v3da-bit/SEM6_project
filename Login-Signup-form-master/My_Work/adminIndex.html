@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Cinema</title>
+    <link rel="stylesheet" href="AdminStyle.css">
+    <link rel="stylesheet" href="swiper_bundle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css"
+        integrity="sha512-jxGmKjC/OykrTklkNK2NgnhNtKtUAADFY+rvSi3nA7dbaPRfjrSXYxHqX8iq5N6WTOntqEQZrEwW3L84sirfKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+        integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shorcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="fix" onload="loadData()">
+
+    <header>
+        <div class="navv containerr">
+            <a href="index.html" class="logo">
+                Admin<span>Page</span>
+            </a>
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="search Movie">
+                <i class='bx bx-search'></i>
+            </div>
+            <a movieBox href="#" class="user">
+                <img src="imgs_movies/img/user.jpg" alt="" class="user-img">
+            </a>
+            <div class="navbarr">
+                <a href="#home" class="nav-linkk">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#popular-content" class="nav-linkk">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="#" id="searchIndex" class="nav-linkk">
+
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Explore</span>
+                </a>
+                <a href="#movie" class="nav-linkk">
+                    <i class='bx bx-tv'></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                <a href="#favourite" class="nav-linkk">
+                    <i class='bx bx-heart'></i>
+                    <span class="nav-link-title">Favourite</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home containerr" id="home">
+        
+        
+            <div class="home-text top-50" id="home-text">
+                <!-- <h1 class="home-title" id="homeTopic">Hitman's <br> wife's<br>Bodyguard</h1>
+                <p id="release">Releasing 10 April</p>
+                <br>
+                <button class="btn hitmanBook btn-light" id="editHome" onclick="editHome()"><i
+                        class="fa-solid fa-pen-to-square"></i>Edit</button>-->
+                        
+                    </div>
+                    <br><br> 
+            <div class="container" id="messagehome" style="visibility: hidden;">
+                <div class="pum-content popmake-content">
+
+                    <div class="form-style-9 position-relative">
+                        <button class="btn top-0 end-0 position-absolute" id="closeMsgBox"><i class="fa fa-times"
+                                aria-hidden="true"></i>
+                        </button>
+                        <label for="id">Enter ID:</label><br>
+                        <input type="number" name="id" id="Mid"/><br>
+                        <label for="movieName">Movie Name:</label><br>
+                        <input type="text" name="movieName" id="MovieName" />
+                        <br><label for="releaseDate">Release Date:</label><br>
+                        <input type="text" name="releaseDate" id="releaseDate" /><br>
+                        <label for="HomeImg">Select Image:</label><br>
+                        <input class="link-primary" type="file" name="HomeImage" id="homeImg" value="Upload" accept="image/jpeg, image/png,image/jpg"  /><br><br>
+                        <input class="btn btn-primary" type="submit" value="Submit" id="homeSubmit"
+                            onclick="insertData()" />
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <img src="imgs_movies/img/home-background.png" alt="" class="home-img" id="home-img"> -->
+        
+            
+        
+
+    </section>
+    
+    <section class="popular containerr" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Popular Movies</h2>
+            <div class="conatiner">
+                <button class="btn btn-primary" onclick="addInSlideMovie()">Add Movies</button>
+                <button class="btn btn-light" onclick="deleteInSlideMovie()" ondblclick="hideInSlideBtn()">delete
+                    Movies</button>
+            </div>
+        </div>
+        <div class="container" id="carouselMovie" style="visibility: hidden; position: absolute;">
+            <div class="pum-content popmake-content">
+
+                <div class="form-style-9 position-relative">
+                    <button class="btn top-0 end-0 position-absolute" id="closeMsgBox2"><i class="fa fa-times"
+                            aria-hidden="true"></i>
+                    </button>
+                    <label for="id">Enter ID:</label><br>
+                    <input type="number" name="id" id="Mid2"/><br>
+                    <label for="movieName">Movie Name:</label><br>
+                    <input type="text" name="movieName" id="MovieName2" /><br>
+                    <label for="movieType1">Movie Type:</label><br>
+                    <input type="text" name="movieType1" id="MovieType2" /><br>
+                    <label for="HomeImg">Select Image:</label><br>
+                    <input class="link-primary" type="file" name="carouselImage" id="carouselImg" value="Upload" accept="image/jpeg, image/png,image/jpg"  /><br><br>
+                    <input class="btn btn-primary" type="submit" value="Submit" id="carouselSubmit"
+                        onclick="carouselInsert()" />
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+        <div class="popular-content myStyle swiper" id="popular-content">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators" id="carousel-indicator">
+                    <!-- <li data-target="#carouselExampleIndicators" class="c11"  data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" class="c12" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" class="c13" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" class="c14" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" class="c15" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" class="c16" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" class="c17" data-slide-to="6"></li>
+                    <li data-target="#carouselExampleIndicators" class="c18" data-slide-to="7"></li> -->
+                </ol>
+                <div class="carousel-inner outerdiv" id="outDiv">
+                    <!-- <div class="carousel-item active imgDiv movie-box c11">
+                        <img class="d-block h-100 w-100 movie-box imgBlock" src="imgs_movies/img/movie-1.jpg"
+                        alt="First slide">
+                        <div class="container justify-content-center">
+                        
+                    </div>
+                        <div class=" box-text h-25 w-100 ">
+                            <h2 class="movie-title">Jumanji: Welcome To The Jungle</h2>
+                            <span class="movie-type">Adventure 
+
+
+                                    
+                        
+                            </span>
+
+                            
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(11)" style=" background-color: transparent; color: red;">
+                               <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c12">
+                        <img class="d-block h-100 w-100 movie-box imgBlock" src="imgs_movies/img/avengersEndGame.jpg"
+                            alt="Second slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">Avengers: End Game</h2>
+                            <span class="movie-type">Action,Marvel </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(12)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                            </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c13">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-3.jpg" alt="Third slide">
+                        <div class="box-text h-25 w-100  ">
+                            <h2 class="movie-title">Sang-Chi And The Legend Of Ten Rings</h2>
+                            <span class="movie-type">Action,Marvel </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(13)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             
+                        </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c14">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-4.jpg" alt="Fourth slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">Eternels</h2>
+                            <span class="movie-type">Action </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(14)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             
+                        </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c15">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-5.jpg" alt="Fifth slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">Spectre</h2>
+                            <span class="movie-type">Adventure </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(15)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c16">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/movie-7.jpg" alt="Seventh slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">The Wolverine</h2>
+                            <span class="movie-type">Action </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(16)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             
+                        </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c17">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/img/justice_league.jpg"
+                            alt="Eight slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">Justice League</h2>
+                            <span class="movie-type">Action </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(17)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             
+                        </div>
+                    </div>
+                    <div class="carousel-item imgDiv movie-box c18">
+                        <img class="d-block h-100 w-100 imgBlock" src="imgs_movies/fastx.jpg" alt="Sixth slide">
+                        <div class="box-text h-25 w-100 ">
+                            <h2 class="movie-title">Fast X</h2>
+                            <span class="movie-type">Adventure,Action </span>
+                            <button class="btn book deleteInSlide" onclick="deleteInSlide(18)" style=" background-color: transparent; color: red;">
+                                <h3><i class="fa-solid fa-circle-minus"></i></h3>
+                             </button>
+                             
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="swiper-button-prev"></span>
+                    <span class="sr-only">Previous</span> </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="swiper-button-next"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+
+        </div>
+    </section>
+    <section class="movies ">
+        <div id="movie" class="container">
+            <div class="heading" style="margin-left: 10px;">
+                <h2 class="heading-title">Movie And Shows</h2>
+                <div class="conatiner">
+                    <button class="btn btn-primary" onclick="addMovie()">Add Movies</button>
+                    <button class="btn btn-light" onclick="deleteMovie()" ondblclick="hideBtn()">delete Movies</button>
+                </div>
+            </div>
+            <div class="container position-absolute" id="messageMovie" style="visibility: hidden;">
+                <div class="pum-content popmake-content">
+
+                    <div class="form-style-9 position-relative">
+                        <button class="btn top-0 end-0 position-absolute" id="closeMsgBox1"><i class="fa fa-times"
+                                aria-hidden="true"></i>
+                        </button>
+                        <label for="id">Enter ID:</label><br>
+                        <input type="number" name="id" id="Mid1"/><br>
+                        <label for="movieName">Movie Name:</label><br>
+                        <input type="text" name="movieName" id="MovieName1" /><br>
+                        <label for="movieType1">Movie Type:</label><br>
+                        <input type="text" name="movieType1" id="MovieType1" /><br>
+                        <label for="HomeImg">Select Image:</label><br>
+                        <input class="link-primary" type="file" name="movieImage" id="movieImg" value="Upload" accept="image/jpeg, image/png,image/jpg"  /><br><br>
+                        <input class="btn btn-primary" type="submit" value="Submit" id="movieSubmit"
+                            onclick="movieInsert()" />
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="d-flex" id="movie-container1">
+                <!-- <div class=" p-2 movieItems">
+                    <img class="d-block showsImg" src="imgs_movies/img/movie-6.jpg">
+                    <div class="box-text w-100 "><br>
+                        <h2 class="movie-title">Money-Heist</h2>
+                        <span class="movie-type">Adventure</span>
+                        <button class="btn like1" onclick="favourite1()">
+
+
+                            <h2 class="heart1">&#9825;</h2>
+                        </button>
+                        <br>
+                    </div><br><br>
+                    <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                            class="showsBook ">Book
+                            Now</button></a>
+
+
+                </div>
+                 -->
+            </div>
+            <br>
+            <div class="d-flex" id="movie-container2">
+                <!-- <div class=" p-2 movieItems">
+                    <img class="d-block showsImg" src="imgs_movies/img/popular-movie-4.jpg">
+                    <div class="box-text w-100 "><br>
+                        <h2 class="movie-title">Squid Game</h2>
+                        <span class="movie-type">Thrill,Adventure</span><button class="btn like6"
+                            onclick="favourite6()">
+
+
+                            <h2 class="heart6">&#9825;</h2>
+                        </button>
+                        <br>
+                    </div><br><br>
+                    <a href="Movie_Reservation/moneyHeist/MoneyHeist_seats.html"><button
+                            class="showsBook ">Book
+                            Now</button></a>
+
+
+                </div>
+                
+ -->
+
+            </div>
+            <br>
+            <div class="d-flex" id="movie-container3">
+
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="favourite">
+        <div class="container">
+            <h1>Edit The Reservation seats of Users</h1>
+            <select name="reservation" id="seatsReservation" onchange="selection()">
+                <option value="" selected disabled>--Select The Movie--</option>
+                <option value="m1">Money-Heist</option>
+                <option value="m2">Johnny English:Strikes Again</option>
+                <option value="m3">SpiderMan: No Way Home</option>
+                <option value="m4">Jungle Cruise</option>
+                <option value="m5">Loki</option>
+                <option value="m6">Squid Game</option>
+                <option value="m7">The Falcon And The Winter Soldier</option>
+                <option value="m8">Hawkeye</option>
+                <option value="m9">Agents Of S.H.I.E.L.D.</option>
+                <option value="m10">AVATAR: The Way Of Water</option>
+                <option value="m11">Jumanji: Welcome To The Jungle</option>
+                <option value="m12">Avengers: End Game</option>
+                <option value="m13">Sang-Chi And The Legend Of Ten Rings</option>
+                <option value="m14">Eternels</option>
+                <option value="m15">Spectre</option>
+                <option value="m16">The Wolverine</option>
+                <option value="m17">Justice League</option>
+            </select>
+        </div>
+
+
+
+    </section>
+
+    <script type="text/javascript" src="AdminIndex.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
