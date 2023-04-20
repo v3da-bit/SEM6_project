@@ -9,7 +9,7 @@
       echo "connected";
     }
     
-    
+    session_start();
     if (isset($_REQUEST['submit'])) {
       
       //header("Location: login.php");
@@ -60,6 +60,7 @@
       } else {
         die("Error" . $conn->error);
       }
+      
       header("Location: login.php");
     }
     $conn->close();

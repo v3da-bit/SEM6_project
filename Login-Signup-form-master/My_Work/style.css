@@ -17,6 +17,31 @@
     --text-color: #fcfeff;
 }
 
+/* .loading{
+
+    background-image: url("./imgs_movies/animation.gif");
+    background-color: #2d2e37;
+    z-index: 1;
+    height:100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: grid;
+    place-items: center;
+    
+} */
+#loading {
+    background-color: #2d2e37;
+    background-image: url('./imgs_movies/animation.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    background-size: contain;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -144,6 +169,15 @@ header {
 
 .nav-link-title {
     font-size: 0.7rem;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem !important;
+    border-radius: 0.5rem;
+
 }
 
 .home {
@@ -462,4 +496,12 @@ header {
 
 .LikeBtn {
     color: white;
+}
+
+#br1 {
+    display: none;
+}
+
+#br2 {
+    display: none;
 }

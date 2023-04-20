@@ -2,11 +2,13 @@
 <?php
 if (isset($_POST['submit'])) {
   echo "hello";
+  session_start();
 
   //echo "<script>alert('hello');</script>";
   
   $email =  $_POST['email'];
   $pass =   $_POST['password'];
+  
   //$encryptPass= password_hash($pass, PASSWO);
   
 $conn=mysqli_connect("localhost","root","","cinema_booking");
@@ -21,15 +23,37 @@ $emailquery="SELECT * FROM login WHERE email='$email'";
 //$passquery="SELECT * FROM login WHERE ";
 $sql=mysqli_query($conn,$emailquery);
 $emailcount=mysqli_num_rows($sql);  
+if($emailquery){
+  
+}
 if ($emailcount) {
   echo "email present";
-
+  
   $email_pass=mysqli_fetch_assoc($sql);
+  
   $db_pass_check=$email_pass['password'];
   $pass_decode=password_verify($pass,$db_pass_check);
   if ($pass_decode) {
     echo "succeed";
-    header("Location: My_Work\index.html");
+    if($email_pass['isAdmin']==1){
+      header("Location: ./My_Work/adminIndex.html");
+    }else{
+      // $fNameQuery="SELECT `fullName` FROM login WHERE email='$email'"; 
+      // $fullname=mysqli_query($conn,$fNameQuery);
+      // $fName_pass=mysqli_fetch_assoc($sql);
+      $fullname=$email_pass['fullName'];
+      $_SESSION['fName']=$fullname;
+      $emailQ=$email_pass['email'];
+      $_SESSION['Email']=$emailQ;
+      $Uname=$email_pass['UserName'];
+      $_SESSION['uName']=$Uname;
+      // echo $_SESSION['fName'];
+      // echo $fullname;
+      // $_SESSION['Email']=$email;
+      // $_SESSION['user']=$uname;
+      
+    header("Location: My_Work\index.php");
+    }
   }
   else{
     echo "password didn't match";
@@ -80,7 +104,7 @@ $query=`INSERT INTO login (UserName,password) VALUES('$uname','$pass')`;
       <form class="login-form">
       <h5>Didn't have Any Account: <a href="signup.php">SignUp</a></h5>
     </form>
-    </form>
+    
 
     
   </div>

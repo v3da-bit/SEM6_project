@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Email Try</title>
+</head>
+
+<body style="    background: var(--body-color);
+background-color: #22232e;
+color: var(--text-color);">
+
+<div class="container">
+    <a href="../index.php"><button class="btn btn-primary">Home</button></a>
+</div>
+
+    <div class="container border mt-3 bg-light">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-primary text-white">
+                <h1>Hi User!</h1>
+                <h4>
+                    This is our Help Line or Contact Us Form, <br> please Enter your name and email And your Query We will solve it as soon as possible.<br>Thanks!
+                </h4>
+            </div>
+            <div class="col-md-6 border-left py-3">
+                <h1>Contact form</h1>
+                <div class="form-group">
+                    <h5 for="name">Your Name</h5>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                </div>
+                <div class="form-group">
+                    <h5 for="email">Your Email</h5>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <h5 for="message">Message</h5>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("5xV3vdH7PfND4KciS");
+        })();
+        
+    </script>
+    <script type="text/javascript" src="contactEmail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

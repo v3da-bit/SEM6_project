@@ -1,0 +1,27 @@
+.fix {
+    background: var(--body-color);
+    background-color: #22232e;
+    color: var(--text-color);
+}
+.main{
+    margin-top: 5%;
+    justify-content: center;
+}
+.details{
+    color: aliceblue;
+}
+.imgUser{
+    margin-top: 70px;
+    margin-left: 200px;
+    
+   }
+.user-img{
+    height: 180px;;
+    width: 260px;
+    /* object-fit: cover;
+    object-position: center;   */
+    position: relative;
+    background-size:contain;
+    background-repeat: no-repeat; 
+    /* background-attachment: fixed; */
+}
