@@ -14,11 +14,37 @@
 <body style="    background: var(--body-color);
 background-color: #22232e;
 color: var(--text-color);">
-    
+
 <div class="container">
     <a href="../index.php"><button class="btn btn-primary">Home</button></a>
 </div>
 
+    <div class="container border mt-3 bg-light">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-primary text-white">
+                <h1>Hi User!</h1>
+                <h4>
+                    This is our Help Line or Contact Us Form, <br> please Enter your name and email And your Query We will solve it as soon as possible.<br>Thanks!
+                </h4>
+            </div>
+            <div class="col-md-6 border-left py-3">
+                <h1>Contact form</h1>
+                <div class="form-group">
+                    <h5 for="name">Your Name</h5>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                </div>
+                <div class="form-group">
+                    <h5 for="email">Your Email</h5>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <h5 for="message">Message</h5>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
